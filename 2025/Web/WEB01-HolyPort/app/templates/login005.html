@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Form</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:700&display=swap");
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background-color: #0d0d0d;
+				color: #d4ffcd;
+				font-family: "UnifrakturCook", cursive;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background-image: linear-gradient(to bottom, #0d0d0d 0%, #1e1e1e 100%);
+				background-repeat: no-repeat;
+				position: relative;
+			}
+
+			/* Optional: blood drips or overlay */
+			body::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url("https://www.transparenttextures.com/patterns/blood.png");
+				opacity: 0.06;
+				pointer-events: none;
+			}
+
+			.wrapper {
+				background-color: rgba(18, 18, 18, 0.85);
+				padding: 35px;
+				width: 380px;
+				border: 2px solid #990000;
+				border-radius: 8px;
+				box-shadow: 0 0 20px #550000;
+				z-index: 1;
+				text-align: center;
+			}
+
+			h2 {
+				font-size: 3.5rem;
+				color: #d30000;
+				margin-bottom: 25px;
+				text-shadow: 2px 2px 0 #000;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+
+			.input-field label {
+				font-size: 1.4rem;
+				margin-bottom: 6px;
+				display: block;
+				color: #eeeeee;
+				text-shadow: 1px 1px 1px #000;
+			}
+
+			.input-field input {
+				width: 100%;
+				padding: 10px 12px;
+				border-radius: 4px;
+				border: 1px solid #444;
+				background: #1a1a1a;
+				color: #d4ffcd;
+				font-size: 1rem;
+				transition: border 0.3s;
+			}
+
+			.input-field input:focus {
+				border-color: #d30000;
+				outline: none;
+				background-color: #262626;
+			}
+
+			button {
+				background: #d30000;
+				color: #fff;
+				font-size: 1.3rem;
+				padding: 12px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				font-weight: bold;
+				transition: all 0.3s ease;
+				box-shadow: 0 0 10px #d30000;
+			}
+
+			button:hover {
+				background: #7a0000;
+				box-shadow: 0 0 15px #ff0000 inset, 0 0 10px #ff0000;
+				color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<form method="POST">
+				<h2>Login</h2>
+
+				<div class="input-field">
+					<label for="username">Username</label>
+					<input id="username" name="username" type="text" required />
+				</div>
+
+				<div class="input-field">
+					<label for="password">Magic Word</label>
+					<input id="password" name="password" type="password" required />
+				</div>
+
+				<button type="submit">Log-In</button>
+			</form>
+		</div>
+	</body>
+</html>

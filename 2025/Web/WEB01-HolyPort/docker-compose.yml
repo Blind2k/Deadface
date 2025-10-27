@@ -1,0 +1,25 @@
+services:
+  app:
+    container_name: app
+    restart: always 
+    build:
+      context: ./app
+      no_cache: true
+      args:
+        LPORT: ${LPORT}
+        RPORT: ${RPORT}
+    ports:
+      - 0.0.0.0:${RPORT:-5000}:${LPORT:-5000}
+    environment:
+      # Network
+      - LPORT=${LPORT}
+      - RPORT=${RPORT}
+      # Service related
+      - FLASK_ENV=${FLASK_ENV}
+      - PYTHONDONTWRITEBYTECODE=${PYTHONDONTWRITEBYTECODE}
+      - PYTHONUNBUFFERED=${PYTHONUNBUFFERED}
+      # CTF related
+      - FLAG=${FLAG}
+      - USER_NAME=${USER_NAME}
+      - USER_PASSWORD=${USER_PASSWORD}
+

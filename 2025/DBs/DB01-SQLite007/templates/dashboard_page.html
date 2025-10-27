@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Absolutly not a fake Admin Dashboard</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background: #f5f6fa;
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				width: 100%;
+				max-width: 600px;
+				margin: 40px auto;
+				background: #fff;
+				padding: 20px;
+				border-radius: 12px;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+			}
+			h2 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			input[type="text"],
+			select {
+				width: 100%;
+				padding: 12px;
+				margin: 8px 0;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				box-sizing: border-box;
+			}
+			button {
+				width: 100%;
+				padding: 12px;
+				background: #3498db;
+				color: #fff;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			button:hover {
+				background: #2980b9;
+			}
+			.card {
+				background: #f9f9f9;
+				padding: 15px;
+				margin-bottom: 12px;
+				border-radius: 8px;
+			}
+			.results {
+				margin-top: 20px;
+				padding: 10px;
+				background: #f9f9f9;
+				border-radius: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<h2>Admin Dashboard</h2>
+				<form method="POST" action="/dashboard">
+					<label for="search">Search Users</label><br>
+					<input type="text" id="search" name="search" placeholder="Enter username" required />
+					<label for="database">Database</label><br>
+                    <select id="database" name="database">
+						<option value="activity_logs">Activity Logs</option>
+						<option value="api_keys">API Keys</option>
+						<option value="profiles">Profiles</option>
+					</select>
+					<button type="submit">Search</button>
+				</form>
+				<div class="results">
+					<h3>Results:</h3>
+					<div>{{ results | safe }}</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

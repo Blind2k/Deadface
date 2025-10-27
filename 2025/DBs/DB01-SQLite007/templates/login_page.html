@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>NOT a Fake Login Page</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background: #f5f6fa;
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				width: 100%;
+				max-width: 400px;
+				margin: 80px auto;
+				background: #fff;
+				padding: 20px;
+				border-radius: 12px;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+			}
+			h2 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			input[type="text"],
+			input[type="password"] {
+				width: 100%;
+				padding: 12px;
+				margin: 8px 0;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				box-sizing: border-box;
+			}
+			button {
+				width: 100%;
+				padding: 12px;
+				background: #3498db;
+				color: #fff;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			button:hover {
+				background: #2980b9;
+			}
+			.error {
+				color: red;
+				text-align: center;
+				margin-bottom: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="login-box">
+			<form class="card" method="POST" action="/">
+				<h2>Login</h2>
+				{% if error %}
+					<p class="error">{{ error }}</p>
+				{% endif %}
+				<label for="username">User Name</label><br>
+				<input type="text" id="username" name="username" placeholder="SuperUser008" required />
+				<label for="password">Password</label><br>
+				<input type="password" id="password" name="password" placeholder="UwillNeverguessmyP422!" required />
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</body>
+</html>

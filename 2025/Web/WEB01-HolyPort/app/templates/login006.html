@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<title>Login Page</title>
+		<style>
+			body {
+				font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+				margin: 40px;
+				background: #f6f8fb;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 50vh;
+			}
+
+			.card {
+				max-width: 720px;
+				margin: 0 auto;
+				background: #fff;
+				border-radius: 12px;
+				padding: 20px;
+				box-shadow: 0 6px 18px rgba(20, 30, 40, 0.08);
+			}
+
+			label {
+				display: block;
+				margin: 10px 0 6px;
+				font-weight: 600;
+			}
+
+			input {
+				width: 100%;
+				padding: 10px;
+				border-radius: 8px;
+				border: 1px solid #e2e8f0;
+			}
+
+			button {
+				margin-top: 12px;
+				padding: 10px 14px;
+				border-radius: 8px;
+				border: 0;
+				background: #0b63d6;
+				color: #fff;
+				font-weight: 700;
+			}
+            
+			pre {
+				background: #0f1724;
+				color: #e6eef8;
+				padding: 12px;
+				border-radius: 8px;
+				overflow: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="card">
+			<h2>Login helper</h2>
+			<form id="loginForm" method="POST">
+				<label for="username">username</label>
+				<input id="username" name="username" value="admin" required/>
+
+				<label for="password">password</label>
+				<input id="password" name="password" value="password" required/>
+
+				<button type="submit" id="sendBtn">Send LOGIN request from browser</button>
+			</form>
+		</section>
+		<noscript>Dude, you need to enable JavaScript to run this app.</noscript>
+	</body>
+</html>

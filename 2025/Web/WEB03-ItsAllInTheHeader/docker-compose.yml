@@ -1,0 +1,19 @@
+services:
+  backend:
+    container_name: backend
+    restart: always 
+    build:
+      context: ./server
+      no_cache: true
+      args:
+        LHOST: ${LHOST}
+        LPORT: ${LPORT}
+        RPORT: ${RPORT}
+    ports:
+      - "0.0.0.0:${RPORT:-5000}:${LPORT:-5000}"
+    environment: # container env var
+      - LHOST=${LHOST}
+      - LPORT=${LPORT}
+      - RPORT=${RPORT}
+      - FLAG=${FLAG}
+

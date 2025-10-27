@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Form</title>
+		<style>
+			/* Importing Google Fonts - Poppins */
+			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Poppins", sans-serif;
+			}
+
+			body {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				padding: 15px;
+				background: #1abc9c;
+				overflow: hidden;
+			}
+
+			.wrapper {
+				max-width: 500px;
+				width: 100%;
+				background: #fff;
+				border-radius: 5px;
+				box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+			}
+
+			.wrapper .title {
+				height: 120px;
+				background: #16a085;
+				border-radius: 5px 5px 0 0;
+				color: #fff;
+				font-size: 30px;
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#login-form {
+				padding: 25px 35px;
+			}
+
+			#password {
+				margin-top: 12px;
+			}
+
+			#submit-button {
+				margin-top: 20px;
+				color: #fff;
+				font-size: 20px;
+				font-weight: 500;
+				padding-left: 0px;
+				background: #16a085;
+				border: 1px solid #16a085;
+				cursor: pointer;
+			}
+
+			#submit-button:hover {
+				background: #12876f;
+			}
+
+			.input-field input,
+			#submit-button {
+				width: 100%;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="title">
+				<span>Login Form</span>
+			</div>
+			<form id="login-form" method="POST">
+				<div class="input-field">
+					<input id="username" name="username" type="text" placeholder="Username" />
+				</div>
+
+				<div class="input-field">
+					<input id="password" name="password" type="password" placeholder="Password" required />
+				</div>
+
+				<button id="submit-button" type="submit">Log In</button>
+			</form>
+		</div>
+	</body>
+</html>
