@@ -2,13 +2,11 @@
 All of the challenges I made to DEADFACE CTF. Have fun and keep it legal :)
 
 Challenges are organized by category:
-- /web/        → Web exploitation challenges (XSS, SQLi, etc.)
-- /pwn/        → Binary exploitation & memory-safety challenges
-- /reverse/    → Reverse engineering puzzles
-- /crypto/     → Cryptography challenges
-- /forensics/  → Log analysis, PCAPs, disk images, etc.
-- /misc/       → Everything else that doesn't fit neatly above
-- /writeups/   → Official walkthroughs (released after CTF)
+- /Web/            → Web exploitation
+- /OSINT/          → Photos and images
+- /Steganography/  → Hidden messages
+- /DBs/            → DB exploitation (SQL/NoSQL)
+
 
 Each challenge directory includes:
 - Docker compose, Source code or artifacts to deploy/play the challenge
